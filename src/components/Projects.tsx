@@ -31,11 +31,11 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 bg-slate-900">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
-          <p className="text-lg text-gray-600">
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">Featured Projects</h2>
+          <p className="text-lg text-slate-400">
             Showcasing technical expertise through practical implementations
           </p>
         </div>
@@ -44,7 +44,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group"
+              className="bg-slate-800/80 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500/30 transition-all duration-300 group backdrop-blur-sm"
             >
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
@@ -53,37 +53,38 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
                 <div className="absolute top-4 left-4">
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                     {project.category}
                   </span>
                 </div>
-                <div className="absolute top-4 right-4 w-12 h-12 bg-white/90 rounded-lg flex items-center justify-center text-blue-600">
+                <div className="absolute top-4 right-4 w-12 h-12 bg-slate-800/90 rounded-lg flex items-center justify-center text-purple-400 border border-purple-500/30">
                   {project.icon}
                 </div>
               </div>
 
               <div className="p-6">
                 {/* Project Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-white mb-3">
                   {project.title}
                 </h3>
                 
                 {/* Project Description */}
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-slate-400 mb-6 leading-relaxed">
                   {project.description}
                 </p>
 
                 {/* Tech Stack */}
                 <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wider">
+                  <h4 className="text-sm font-semibold text-white mb-3 uppercase tracking-wider">
                     Technologies Used
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium border border-purple-500/30"
                       >
                         {tech}
                       </span>
@@ -93,11 +94,11 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  <button className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200">
+                  <button className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-200">
                     <Github size={18} />
                     <span>Code</span>
                   </button>
-                  <button className="flex-1 flex items-center justify-center gap-2 px-4 py-2 border-2 border-blue-600 text-blue-600 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition-colors duration-200">
+                  <button className="flex-1 flex items-center justify-center gap-2 px-4 py-2 border-2 border-purple-500 text-purple-400 rounded-lg font-medium hover:bg-purple-500 hover:text-white transition-all duration-200">
                     <ExternalLink size={18} />
                     <span>Demo</span>
                   </button>
@@ -108,18 +109,18 @@ const Projects = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center bg-white rounded-xl p-12 shadow-lg">
-          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <Github className="text-blue-600" size={28} />
+        <div className="text-center bg-slate-800/80 rounded-xl p-12 border border-slate-700 backdrop-blur-sm">
+          <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-purple-500/30">
+            <Github className="text-purple-400" size={28} />
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Explore More Projects</h3>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+          <h3 className="text-2xl font-bold text-white mb-4">Explore More Projects</h3>
+          <p className="text-slate-400 mb-8 max-w-2xl mx-auto">
             Continuously working on new projects and contributing to open source. 
             Check out my GitHub profile for the latest updates and code repositories.
           </p>
           <a
             href="#"
-            className="inline-flex items-center gap-3 px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
+            className="inline-flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg"
           >
             <Github size={20} />
             <span>View GitHub Profile</span>

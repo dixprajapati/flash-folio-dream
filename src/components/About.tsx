@@ -27,19 +27,19 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-slate-800/50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">About Me</h2>
+          <p className="text-lg text-slate-400 max-w-3xl mx-auto">
             A dedicated Java developer passionate about creating efficient and scalable software solutions
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">My Journey</h3>
-            <div className="space-y-6 text-gray-600 leading-relaxed">
+            <h3 className="text-3xl font-bold text-white mb-6">My Journey</h3>
+            <div className="space-y-6 text-slate-400 leading-relaxed">
               <p>
                 Currently pursuing my Bachelor's degree in Computer Science at Dr. V. R. Godhania College, 
                 I have developed a strong foundation in software development with a particular focus on Java programming.
@@ -57,20 +57,20 @@ const About = () => {
 
             {/* Education Timeline */}
             <div className="mt-10">
-              <h4 className="text-xl font-semibold text-gray-900 mb-6">Education</h4>
+              <h4 className="text-xl font-semibold text-white mb-6">Education</h4>
               <div className="space-y-4">
-                <div className="border-l-4 border-blue-600 pl-6 pb-4">
-                  <h5 className="font-semibold text-gray-900">Bachelor's in Computer Science</h5>
-                  <p className="text-blue-600 font-medium">Dr. V. R. Godhania College</p>
-                  <p className="text-gray-600">2024 - Present</p>
+                <div className="border-l-4 border-purple-500 pl-6 pb-4">
+                  <h5 className="font-semibold text-white">Bachelor's in Computer Science</h5>
+                  <p className="text-purple-400 font-medium">Dr. V. R. Godhania College</p>
+                  <p className="text-slate-400">2024 - Present</p>
                 </div>
-                <div className="border-l-4 border-gray-300 pl-6 pb-4">
-                  <h5 className="font-semibold text-gray-900">Diploma in Computer Engineering</h5>
-                  <p className="text-gray-600">CGPA: 8.60 | 2021 - 2024</p>
+                <div className="border-l-4 border-slate-600 pl-6 pb-4">
+                  <h5 className="font-semibold text-white">Diploma in Computer Engineering</h5>
+                  <p className="text-slate-400">CGPA: 8.60 | 2021 - 2024</p>
                 </div>
-                <div className="border-l-4 border-gray-300 pl-6">
-                  <h5 className="font-semibold text-gray-900">Higher Secondary School</h5>
-                  <p className="text-gray-600">89% | 2021</p>
+                <div className="border-l-4 border-slate-600 pl-6">
+                  <h5 className="font-semibold text-white">Higher Secondary School</h5>
+                  <p className="text-slate-400">89% | 2021</p>
                 </div>
               </div>
             </div>
@@ -80,15 +80,15 @@ const About = () => {
             {highlights.map((item, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-xl p-6 hover:bg-blue-50 hover:border-blue-200 border border-transparent transition-all duration-300"
+                className="bg-slate-800/80 rounded-xl p-6 hover:bg-slate-700/80 hover:border-purple-500/30 border border-slate-700 transition-all duration-300 backdrop-blur-sm"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center text-purple-400 mb-4 border border-purple-500/30">
                   {item.icon}
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                <h4 className="text-lg font-semibold text-white mb-3">
                   {item.title}
                 </h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-slate-400 text-sm leading-relaxed">
                   {item.description}
                 </p>
               </div>
