@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X, Code2 } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,36 +24,31 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-black/80 backdrop-blur-xl border-b border-purple-500/30 shadow-2xl shadow-purple-500/10' 
-        : 'bg-transparent'
+        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' 
+        : 'bg-white/80 backdrop-blur-sm'
     }`}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex justify-between items-center py-6">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex justify-between items-center py-4">
           <div className="flex items-center gap-3">
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 rounded-full flex items-center justify-center animate-pulse">
-                <Zap className="text-black" size={24} />
-              </div>
-              <div className="absolute inset-0 w-12 h-12 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 rounded-full blur-md opacity-50 animate-ping"></div>
+            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+              <Code2 className="text-white" size={20} />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="text-xl font-bold text-gray-900">
               Tisha Solanki
             </span>
           </div>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-2">
-            {navItems.map((item, index) => (
+          <div className="hidden md:flex items-center gap-8">
+            {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="relative px-6 py-3 text-gray-300 hover:text-white transition-all duration-300 group"
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
               >
-                <span className="relative z-10">{item.name}</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-pink-500/0 to-cyan-500/0 group-hover:from-purple-500/20 group-hover:via-pink-500/20 group-hover:to-cyan-500/20 rounded-lg transition-all duration-300"></div>
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500 group-hover:w-full transition-all duration-300"></div>
+                {item.name}
               </a>
             ))}
           </div>
@@ -62,7 +57,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white p-2 hover:bg-purple-500/20 rounded-lg transition-colors duration-200"
+              className="text-gray-700 p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -71,12 +66,12 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-black/90 backdrop-blur-xl rounded-2xl mt-2 p-6 border border-purple-500/30">
+          <div className="md:hidden bg-white rounded-lg mt-2 p-4 shadow-lg border border-gray-200">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block text-gray-300 hover:text-purple-400 py-3 px-4 rounded-lg hover:bg-purple-500/10 transition-all duration-200"
+                className="block text-gray-700 hover:text-blue-600 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}

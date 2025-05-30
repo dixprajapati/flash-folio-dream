@@ -1,123 +1,94 @@
 
 import React from 'react';
-import { Code2, Brain, Zap, Users, Cpu, Shield } from 'lucide-react';
+import { Code2, GraduationCap, Award, Target } from 'lucide-react';
 
 const About = () => {
   const highlights = [
     {
-      icon: <Code2 size={28} />,
-      title: "Neural Programming",
-      description: "Advanced Java architecture with quantum-inspired algorithms and neural network integration",
-      color: "from-purple-500 to-pink-500"
+      icon: <Code2 size={24} />,
+      title: "Clean Code",
+      description: "Writing maintainable and efficient Java applications with best practices"
     },
     {
-      icon: <Brain size={28} />,
-      title: "AI Integration",
-      description: "Pioneering artificial intelligence solutions with machine learning optimization protocols",
-      color: "from-pink-500 to-cyan-500"
+      icon: <GraduationCap size={24} />,
+      title: "Continuous Learning",
+      description: "Always exploring new technologies and improving development skills"
     },
     {
-      icon: <Zap size={28} />,
-      title: "Quantum Computing",
-      description: "Exploring quantum algorithms and high-performance computing acceleration techniques",
-      color: "from-cyan-500 to-purple-500"
+      icon: <Award size={24} />,
+      title: "Problem Solving",
+      description: "Analytical approach to complex programming challenges"
     },
     {
-      icon: <Users size={28} />,
-      title: "Cyber Collaboration",
-      description: "Leading digital teams through advanced development methodologies and virtual environments",
-      color: "from-purple-500 to-cyan-500"
+      icon: <Target size={24} />,
+      title: "Goal Oriented",
+      description: "Focused on delivering high-quality software solutions"
     }
   ];
 
   return (
-    <section id="about" className="py-32 relative">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-24">
-          <div className="inline-flex items-center gap-3 bg-purple-500/10 border border-purple-500/30 rounded-full px-8 py-4 mb-8">
-            <Cpu className="text-purple-400" size={24} />
-            <span className="text-purple-400 font-semibold tracking-wider uppercase">System Analysis</span>
-          </div>
-          <h2 className="text-6xl lg:text-7xl font-black text-white mb-8">
-            DIGITAL{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">
-              ARCHITECT
-            </span>
-          </h2>
-          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-            Navigating the intersection of consciousness and code, building tomorrow's applications today
+    <section id="about" className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            A dedicated Java developer passionate about creating efficient and scalable software solutions
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
-          <div className="space-y-8">
-            <div className="relative">
-              <div className="absolute -top-4 -left-4 w-24 h-24 border-2 border-purple-500/30 rounded-full animate-spin-slow"></div>
-              <h3 className="text-4xl font-bold text-white mb-8 relative z-10">Neural Pathways</h3>
-              <div className="space-y-6 text-gray-400 text-lg leading-relaxed">
-                <p className="relative pl-6">
-                  <span className="absolute left-0 top-2 w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span>
-                  Currently interfacing with cutting-edge systems at Dr. V. R. Godhania College, 
-                  developing quantum-enhanced cognitive algorithms and neural network architectures.
-                </p>
-                <p className="relative pl-6">
-                  <span className="absolute left-0 top-2 w-2 h-2 bg-pink-500 rounded-full animate-pulse"></span>
-                  My cybernetic enhancement at Rajlakshmi provided deep-system access to enterprise 
-                  consciousness, database neural networks, and collaborative digital ecosystems.
-                </p>
-                <p className="relative pl-6">
-                  <span className="absolute left-0 top-2 w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></span>
-                  Fascinated by the convergence of biological and artificial intelligence, 
-                  exploring quantum consciousness and machine learning symbiosis.
-                </p>
-              </div>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-6">My Journey</h3>
+            <div className="space-y-6 text-gray-600 leading-relaxed">
+              <p>
+                Currently pursuing my Bachelor's degree in Computer Science at Dr. V. R. Godhania College, 
+                I have developed a strong foundation in software development with a particular focus on Java programming.
+              </p>
+              <p>
+                My academic journey has been complemented by practical experience gained during my internship 
+                at Rajlakshmi, where I worked on enterprise Java applications, database management, and 
+                collaborative development practices.
+              </p>
+              <p>
+                I believe in writing clean, efficient code and continuously learning new technologies 
+                to stay current with industry trends and best practices.
+              </p>
             </div>
 
-            <div className="relative bg-gradient-to-r from-purple-900/20 via-black to-cyan-900/20 border border-purple-500/30 rounded-3xl p-8 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-cyan-500/5 animate-pulse"></div>
-              <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-6">
-                  <Shield className="text-purple-400" size={24} />
-                  <h4 className="text-xl font-bold text-white">Neural Timeline</h4>
+            {/* Education Timeline */}
+            <div className="mt-10">
+              <h4 className="text-xl font-semibold text-gray-900 mb-6">Education</h4>
+              <div className="space-y-4">
+                <div className="border-l-4 border-blue-600 pl-6 pb-4">
+                  <h5 className="font-semibold text-gray-900">Bachelor's in Computer Science</h5>
+                  <p className="text-blue-600 font-medium">Dr. V. R. Godhania College</p>
+                  <p className="text-gray-600">2024 - Present</p>
                 </div>
-                <div className="space-y-4">
-                  {[
-                    { title: "Bachelor's Enhancement Protocol", year: "2027", status: "Active" },
-                    { title: "Diploma Neural Integration (8.60 GPA)", year: "2024", status: "Complete" },
-                    { title: "Primary System Initialization (89%)", year: "2021", status: "Complete" }
-                  ].map((item, index) => (
-                    <div key={index} className="flex justify-between items-center p-3 bg-black/30 rounded-lg border border-purple-500/20">
-                      <span className="text-gray-300">{item.title}</span>
-                      <div className="flex items-center gap-3">
-                        <span className="text-purple-400 font-semibold">{item.year}</span>
-                        <span className={`px-2 py-1 rounded-full text-xs ${
-                          item.status === 'Active' ? 'bg-green-500/20 text-green-400' : 'bg-purple-500/20 text-purple-400'
-                        }`}>
-                          {item.status}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
+                <div className="border-l-4 border-gray-300 pl-6 pb-4">
+                  <h5 className="font-semibold text-gray-900">Diploma in Computer Engineering</h5>
+                  <p className="text-gray-600">CGPA: 8.60 | 2021 - 2024</p>
+                </div>
+                <div className="border-l-4 border-gray-300 pl-6">
+                  <h5 className="font-semibold text-gray-900">Higher Secondary School</h5>
+                  <p className="text-gray-600">89% | 2021</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-6">
             {highlights.map((item, index) => (
               <div
                 key={index}
-                className="group relative bg-black/40 border border-gray-800 rounded-3xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:scale-105 overflow-hidden"
+                className="bg-gray-50 rounded-xl p-6 hover:bg-blue-50 hover:border-blue-200 border border-transparent transition-all duration-300"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-transparent to-cyan-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className={`relative w-16 h-16 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4">
                   {item.icon}
-                  <div className={`absolute inset-0 bg-gradient-to-r ${item.color} rounded-2xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300`}></div>
                 </div>
-                <h4 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
+                <h4 className="text-lg font-semibold text-gray-900 mb-3">
                   {item.title}
                 </h4>
-                <p className="text-gray-400 leading-relaxed relative z-10">
+                <p className="text-gray-600 text-sm leading-relaxed">
                   {item.description}
                 </p>
               </div>

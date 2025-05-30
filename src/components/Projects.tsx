@@ -1,94 +1,89 @@
 
 import React from 'react';
-import { ExternalLink, Github, Code2, Database, Cpu, Rocket } from 'lucide-react';
+import { ExternalLink, Github, Code2, Database, Cpu } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
     {
-      title: "Quantum Java Enterprise",
-      description: "Next-generation Java application with neural Hibernate frameworks, featuring quantum database connectivity, consciousness management systems, and AI-enhanced RESTful endpoints with comprehensive testing matrices.",
-      tech: ["Java Quantum", "Hibernate Neural", "MySQL Matrix", "Spring Fusion", "JUnit AI"],
-      icon: <Code2 size={32} />,
-      gradient: "from-blue-500 via-purple-500 to-cyan-500",
-      bgGradient: "from-blue-500/10 via-purple-500/10 to-cyan-500/10"
+      title: "Enterprise Java Application",
+      description: "A comprehensive Java application built with modern frameworks, featuring database connectivity, user management, and RESTful API endpoints with comprehensive testing suite.",
+      tech: ["Java", "Hibernate", "MySQL", "Spring Framework", "JUnit"],
+      icon: <Code2 size={28} />,
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop",
+      category: "Web Application"
     },
     {
-      title: "Neural Database Matrix",
-      description: "Advanced consciousness database management system with quantum-optimized query processing, data integrity algorithms, and real-time monitoring capabilities for enterprise-level neural networks.",
-      tech: ["SQL Consciousness", "Database Neural Design", "Quantum Optimization", "AI Data Modeling"],
-      icon: <Database size={32} />,
-      gradient: "from-green-500 via-teal-500 to-cyan-500",
-      bgGradient: "from-green-500/10 via-teal-500/10 to-cyan-500/10"
+      title: "Database Management System",
+      description: "Advanced database management system with optimized query processing, data integrity features, and real-time monitoring capabilities for enterprise-level applications.",
+      tech: ["SQL", "Database Design", "Query Optimization", "Data Modeling"],
+      icon: <Database size={28} />,
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop",
+      category: "Database"
     },
     {
-      title: "Quantum Logic Simulator",
-      description: "Revolutionary digital consciousness simulator with quantum processing capabilities, featuring advanced flip-flop networks, neural multiplexers, and complex quantum logic gate operations.",
-      tech: ["C++ Quantum", "Neural Logic Design", "Quantum Algorithms", "Performance AI"],
-      icon: <Cpu size={32} />,
-      gradient: "from-purple-500 via-pink-500 to-red-500",
-      bgGradient: "from-purple-500/10 via-pink-500/10 to-red-500/10"
+      title: "Digital Logic Design Project",
+      description: "Complex digital system design featuring advanced flip-flop circuits, multiplexers, and logic gate implementations with performance optimization and testing protocols.",
+      tech: ["C++", "Logic Design", "Algorithm Design", "Performance Testing"],
+      icon: <Cpu size={28} />,
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop",
+      category: "System Design"
     }
   ];
 
   return (
-    <section id="projects" className="py-32 relative">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-24">
-          <div className="inline-flex items-center gap-3 bg-cyan-500/10 border border-cyan-500/30 rounded-full px-8 py-4 mb-8">
-            <Rocket className="text-cyan-400" size={24} />
-            <span className="text-cyan-400 font-semibold tracking-wider uppercase">Digital Artifacts</span>
-          </div>
-          <h2 className="text-6xl lg:text-7xl font-black text-white mb-8">
-            QUANTUM{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              CREATIONS
-            </span>
-          </h2>
-          <p className="text-xl text-gray-400 max-w-4xl mx-auto">
-            Breakthrough innovations forged in the digital realm of consciousness and code
+    <section id="projects" className="py-20 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+          <p className="text-lg text-gray-600">
+            Showcasing technical expertise through practical implementations
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative bg-black/40 border border-gray-800 rounded-3xl overflow-hidden hover:border-purple-500/50 transition-all duration-500 hover:scale-105"
+              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group"
             >
-              {/* Animated header gradient */}
-              <div className={`h-2 bg-gradient-to-r ${project.gradient} relative overflow-hidden`}>
-                <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} animate-pulse opacity-50`}></div>
-              </div>
-              
-              <div className="p-10 relative overflow-hidden">
-                {/* Background animation */}
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-transparent to-cyan-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
-                {/* Icon */}
-                <div className={`relative w-24 h-24 bg-gradient-to-r ${project.gradient} rounded-3xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform duration-300`}>
-                  {project.icon}
-                  <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300`}></div>
+              {/* Project Image */}
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute top-4 left-4">
+                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    {project.category}
+                  </span>
                 </div>
+                <div className="absolute top-4 right-4 w-12 h-12 bg-white/90 rounded-lg flex items-center justify-center text-blue-600">
+                  {project.icon}
+                </div>
+              </div>
 
-                {/* Content */}
-                <h3 className="text-3xl font-bold text-white mb-6 group-hover:text-purple-400 transition-colors duration-300 relative z-10">
+              <div className="p-6">
+                {/* Project Title */}
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {project.title}
                 </h3>
                 
-                <p className="text-gray-400 mb-8 leading-relaxed text-lg relative z-10">
+                {/* Project Description */}
+                <p className="text-gray-600 mb-6 leading-relaxed">
                   {project.description}
                 </p>
 
                 {/* Tech Stack */}
-                <div className="mb-10 relative z-10">
-                  <h4 className="text-sm font-semibold text-purple-400 mb-4 uppercase tracking-wider">
-                    Neural Architecture
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wider">
+                    Technologies Used
                   </h4>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-4 py-2 bg-gray-800/50 text-gray-300 rounded-full text-sm border border-gray-700/50 hover:border-purple-500/50 hover:text-white transition-all duration-200 hover:scale-105"
+                        className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium"
                       >
                         {tech}
                       </span>
@@ -97,15 +92,14 @@ const Projects = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex gap-4 relative z-10">
-                  <button className="flex-1 flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white rounded-2xl font-semibold hover:scale-105 transition-transform duration-300 shadow-lg shadow-purple-500/25 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 hover:opacity-100 transition-opacity duration-300 blur-lg"></div>
-                    <Github size={20} className="relative z-10" />
-                    <span className="relative z-10">Neural Code</span>
+                <div className="flex gap-3">
+                  <button className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200">
+                    <Github size={18} />
+                    <span>Code</span>
                   </button>
-                  <button className="flex-1 flex items-center justify-center gap-3 px-6 py-4 border-2 border-purple-500 text-purple-400 rounded-2xl font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 hover:scale-105">
-                    <ExternalLink size={20} />
-                    <span>Launch</span>
+                  <button className="flex-1 flex items-center justify-center gap-2 px-4 py-2 border-2 border-blue-600 text-blue-600 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition-colors duration-200">
+                    <ExternalLink size={18} />
+                    <span>Demo</span>
                   </button>
                 </div>
               </div>
@@ -114,29 +108,22 @@ const Projects = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center">
-          <div className="relative bg-gradient-to-r from-purple-500/10 via-cyan-500/10 to-pink-500/10 border border-purple-500/30 rounded-3xl p-16 max-w-4xl mx-auto overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5 animate-pulse"></div>
-            <div className="relative z-10">
-              <div className="relative w-20 h-20 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-3xl flex items-center justify-center mx-auto mb-8">
-                <Github className="text-white" size={32} />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-3xl blur-xl opacity-50 animate-ping"></div>
-              </div>
-              <h3 className="text-4xl font-bold text-white mb-6">Explore the Neural Network</h3>
-              <p className="text-gray-400 mb-10 text-xl leading-relaxed">
-                Continuously evolving digital consciousness through quantum algorithms and neural architectures. 
-                Interface with the collective intelligence for latest quantum innovations.
-              </p>
-              <a
-                href="#"
-                className="inline-flex items-center gap-4 px-10 py-5 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-2xl font-semibold hover:scale-105 transition-transform duration-300 shadow-lg shadow-purple-500/25 relative overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 opacity-0 hover:opacity-100 transition-opacity duration-300 blur-lg"></div>
-                <Github size={28} className="relative z-10" />
-                <span className="relative z-10 text-xl">Access Neural Repository</span>
-              </a>
-            </div>
+        <div className="text-center bg-white rounded-xl p-12 shadow-lg">
+          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Github className="text-blue-600" size={28} />
           </div>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Explore More Projects</h3>
+          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+            Continuously working on new projects and contributing to open source. 
+            Check out my GitHub profile for the latest updates and code repositories.
+          </p>
+          <a
+            href="#"
+            className="inline-flex items-center gap-3 px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
+          >
+            <Github size={20} />
+            <span>View GitHub Profile</span>
+          </a>
         </div>
       </div>
     </section>

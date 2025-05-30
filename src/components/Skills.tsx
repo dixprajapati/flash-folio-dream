@@ -1,130 +1,109 @@
 
 import React from 'react';
-import { Code, Database, Cpu, Users, Globe, Star, Zap } from 'lucide-react';
+import { Code, Database, Cpu, Users, Globe, Star } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
     {
-      icon: <Code size={28} />,
-      title: "Neural Languages",
-      color: "from-purple-500 to-pink-500",
+      icon: <Code size={24} />,
+      title: "Programming Languages",
       skills: [
-        { name: "Java Quantum", level: 95 },
-        { name: "Python AI", level: 90 },
-        { name: "C++ Neural", level: 85 },
-        { name: "C Systems", level: 88 }
+        { name: "Java", level: 90 },
+        { name: "Python", level: 75 },
+        { name: "C++", level: 80 },
+        { name: "C", level: 85 }
       ]
     },
     {
-      icon: <Database size={28} />,
-      title: "Cyber Frameworks",
-      color: "from-pink-500 to-cyan-500",
+      icon: <Database size={24} />,
+      title: "Frameworks & Technologies",
       skills: [
-        { name: "Hibernate Matrix", level: 82 },
-        { name: "Database Consciousness", level: 85 },
-        { name: "Logic Gate Networks", level: 90 },
-        { name: "OS Integration", level: 80 }
+        { name: "Hibernate", level: 80 },
+        { name: "Database Management", level: 85 },
+        { name: "Digital Logic Design", level: 90 },
+        { name: "Operating Systems", level: 75 }
       ]
     },
     {
-      icon: <Cpu size={28} />,
-      title: "Digital Synthesis",
-      color: "from-cyan-500 to-purple-500",
+      icon: <Cpu size={24} />,
+      title: "Development Skills",
       skills: [
-        { name: "Application Genesis", level: 88 },
-        { name: "Performance Optimization", level: 85 },
-        { name: "Unit Testing Protocols", level: 80 },
-        { name: "Code Review Systems", level: 85 }
+        { name: "Application Development", level: 85 },
+        { name: "Performance Optimization", level: 80 },
+        { name: "Unit Testing", level: 75 },
+        { name: "Code Review", level: 80 }
       ]
     },
     {
-      icon: <Users size={28} />,
-      title: "Collective Intelligence",
-      color: "from-purple-500 to-cyan-500",
+      icon: <Users size={24} />,
+      title: "Professional Skills",
       skills: [
-        { name: "Team Neural Networks", level: 95 },
-        { name: "Problem Solving AI", level: 98 },
-        { name: "Documentation Synthesis", level: 88 },
-        { name: "Version Control Matrix", level: 85 }
+        { name: "Team Collaboration", level: 90 },
+        { name: "Problem Solving", level: 95 },
+        { name: "Technical Documentation", level: 85 },
+        { name: "Version Control", level: 80 }
       ]
     }
   ];
 
   const languages = [
-    { name: "Gujarati", level: "Native Core", flag: "🌟" },
-    { name: "Hindi", level: "Fluent Interface", flag: "⚡" },
-    { name: "English", level: "Professional Protocol", flag: "🚀" }
+    { name: "Gujarati", level: "Native", flag: "🇮🇳" },
+    { name: "Hindi", level: "Fluent", flag: "🇮🇳" },
+    { name: "English", level: "Professional", flag: "🇺🇸" }
   ];
 
   const interests = [
-    { name: "AI Consciousness Evolution", icon: "🤖" },
-    { name: "Quantum Hardware Optimization", icon: "⚡" },
-    { name: "Open Source Neural Networks", icon: "🔗" },
-    { name: "Digital Library Architectures", icon: "📚" }
+    { name: "Artificial Intelligence", icon: "🤖" },
+    { name: "Software Architecture", icon: "🏗️" },
+    { name: "Open Source Projects", icon: "🔗" },
+    { name: "Technical Reading", icon: "📚" }
   ];
 
   return (
-    <section id="skills" className="py-32 relative">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-24">
-          <div className="inline-flex items-center gap-3 bg-pink-500/10 border border-pink-500/30 rounded-full px-8 py-4 mb-8">
-            <Zap className="text-pink-400" size={24} />
-            <span className="text-pink-400 font-semibold tracking-wider uppercase">Neural Matrix</span>
-          </div>
-          <h2 className="text-6xl lg:text-7xl font-black text-white mb-8">
-            DIGITAL{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400">
-              POWERS
-            </span>
-          </h2>
-          <p className="text-xl text-gray-400 max-w-4xl mx-auto">
-            Advanced capabilities and quantum-enhanced skill matrices
+    <section id="skills" className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Skills & Expertise</h2>
+          <p className="text-lg text-gray-600">
+            Technical proficiencies and professional capabilities
           </p>
         </div>
 
         {/* Technical Skills */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {skillCategories.map((category, categoryIndex) => (
             <div
               key={categoryIndex}
-              className="group relative bg-black/40 border border-gray-800 rounded-3xl p-10 hover:border-purple-500/50 transition-all duration-500 hover:scale-[1.02] overflow-hidden"
+              className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-transparent to-cyan-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">
+                  {category.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">
+                  {category.title}
+                </h3>
+              </div>
               
-              <div className="relative z-10">
-                <div className="flex items-center gap-4 mb-10">
-                  <div className={`relative w-16 h-16 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
-                    {category.icon}
-                    <div className={`absolute inset-0 bg-gradient-to-r ${category.color} rounded-2xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300`}></div>
-                  </div>
-                  <h3 className="text-3xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">
-                    {category.title}
-                  </h3>
-                </div>
-                
-                <div className="space-y-8">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="group/skill">
-                      <div className="flex justify-between items-center mb-4">
-                        <span className="text-gray-300 font-medium text-lg group-hover/skill:text-white transition-colors duration-200">
-                          {skill.name}
-                        </span>
-                        <span className="text-purple-400 font-bold text-xl">
-                          {skill.level}%
-                        </span>
-                      </div>
-                      <div className="relative w-full bg-gray-800/50 rounded-full h-4 overflow-hidden border border-gray-700">
-                        <div
-                          className={`h-full bg-gradient-to-r ${category.color} rounded-full transition-all duration-1000 ease-out relative`}
-                          style={{ width: `${skill.level}%` }}
-                        >
-                          <div className="absolute inset-0 bg-white/20 rounded-full animate-pulse"></div>
-                          <div className={`absolute inset-0 bg-gradient-to-r ${category.color} rounded-full blur-sm opacity-50 animate-pulse`}></div>
-                        </div>
-                      </div>
+              <div className="space-y-6">
+                {category.skills.map((skill, skillIndex) => (
+                  <div key={skillIndex}>
+                    <div className="flex justify-between items-center mb-3">
+                      <span className="text-gray-700 font-medium">
+                        {skill.name}
+                      </span>
+                      <span className="text-blue-600 font-semibold">
+                        {skill.level}%
+                      </span>
                     </div>
-                  ))}
-                </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div
+                        className="bg-blue-600 h-2 rounded-full transition-all duration-1000 ease-out"
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
@@ -133,55 +112,45 @@ const Skills = () => {
         {/* Languages & Interests */}
         <div className="grid md:grid-cols-2 gap-8">
           {/* Languages */}
-          <div className="relative bg-black/40 border border-gray-800 rounded-3xl p-10 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-cyan-900/10 opacity-50"></div>
-            <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-10">
-                <div className="relative w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center">
-                  <Globe className="text-white" size={28} />
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl blur-lg opacity-50 animate-pulse"></div>
-                </div>
-                <h3 className="text-3xl font-bold text-white">Communication Protocols</h3>
+          <div className="bg-gray-50 rounded-xl p-8">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                <Globe className="text-green-600" size={24} />
               </div>
-              <div className="space-y-6">
-                {languages.map((language, index) => (
-                  <div key={index} className="flex items-center justify-between p-6 bg-gray-900/30 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-colors duration-200">
-                    <div className="flex items-center gap-4">
-                      <span className="text-3xl">{language.flag}</span>
-                      <span className="text-gray-300 font-medium text-lg">{language.name}</span>
-                    </div>
-                    <span className="text-purple-400 font-semibold px-4 py-2 bg-purple-500/20 rounded-full border border-purple-500/30">
-                      {language.level}
-                    </span>
+              <h3 className="text-xl font-bold text-gray-900">Languages</h3>
+            </div>
+            <div className="space-y-4">
+              {languages.map((language, index) => (
+                <div key={index} className="flex items-center justify-between p-4 bg-white rounded-lg">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">{language.flag}</span>
+                    <span className="text-gray-700 font-medium">{language.name}</span>
                   </div>
-                ))}
-              </div>
+                  <span className="text-green-600 font-semibold px-3 py-1 bg-green-100 rounded-full text-sm">
+                    {language.level}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Interests */}
-          <div className="relative bg-black/40 border border-gray-800 rounded-3xl p-10 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/10 to-pink-900/10 opacity-50"></div>
-            <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-10">
-                <div className="relative w-16 h-16 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-2xl flex items-center justify-center">
-                  <Star className="text-white" size={28} />
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-2xl blur-lg opacity-50 animate-pulse"></div>
+          <div className="bg-gray-50 rounded-xl p-8">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                <Star className="text-purple-600" size={24} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900">Interests</h3>
+            </div>
+            <div className="space-y-3">
+              {interests.map((interest, index) => (
+                <div key={index} className="flex items-center gap-3 p-4 bg-white rounded-lg hover:bg-purple-50 transition-colors duration-200">
+                  <span className="text-2xl">{interest.icon}</span>
+                  <span className="text-gray-700">
+                    {interest.name}
+                  </span>
                 </div>
-                <h3 className="text-3xl font-bold text-white">Neural Interests</h3>
-              </div>
-              <div className="space-y-4">
-                {interests.map((interest, index) => (
-                  <div key={index} className="flex items-center gap-4 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-colors duration-200 group">
-                    <span className="text-3xl group-hover:scale-110 transition-transform duration-200">
-                      {interest.icon}
-                    </span>
-                    <span className="text-gray-300 group-hover:text-white transition-colors duration-200 text-lg">
-                      {interest.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
+              ))}
             </div>
           </div>
         </div>
