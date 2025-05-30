@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Code2 } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,27 +24,32 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      isScrolled 
+        ? 'bg-slate-900/90 backdrop-blur-md shadow-2xl border-b border-teal-500/20' 
+        : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold text-white">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex justify-between items-center py-6">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-xl flex items-center justify-center">
+              <Code2 className="text-slate-900" size={24} />
+            </div>
+            <span className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
               Tisha Solanki
             </span>
           </div>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center gap-1 bg-slate-800/50 backdrop-blur-sm rounded-full px-2 py-2">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-white transition-colors duration-200 relative group"
+                className="px-6 py-3 text-gray-300 hover:text-white hover:bg-teal-500/20 rounded-full transition-all duration-300 relative group"
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-400/0 to-cyan-400/0 group-hover:from-teal-400/10 group-hover:to-cyan-400/10 transition-all duration-300"></span>
               </a>
             ))}
           </div>
@@ -53,7 +58,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white p-2"
+              className="text-white p-2 hover:bg-teal-500/20 rounded-lg transition-colors duration-200"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -62,12 +67,12 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-slate-800/95 backdrop-blur-sm rounded-lg mt-2 p-4">
+          <div className="md:hidden bg-slate-800/95 backdrop-blur-sm rounded-2xl mt-2 p-6 border border-teal-500/20">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block text-gray-300 hover:text-white py-2 transition-colors duration-200"
+                className="block text-gray-300 hover:text-teal-400 py-3 px-4 rounded-lg hover:bg-teal-500/10 transition-all duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
